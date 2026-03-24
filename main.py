@@ -13,10 +13,9 @@ app = FastAPI(title="OCR API")
 # Update origins to include your Vercel URL after deployment
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "https://ocr-frontend.vercel.app",     # your Vercel URL
-        "https://ocr-frontend-*.vercel.app",   # preview deployments
+    allow_origins = [
+    "http://localhost:3000",
+    "https://ocr-frontend-blue.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
